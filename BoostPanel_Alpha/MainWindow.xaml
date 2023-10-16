@@ -5,8 +5,61 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BoostPanel_Alpha"
         mc:Ignorable="d"
-        Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Height="400" Width="700"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="Transparent"
+        AllowsTransparency="True">
+
+    <Border Background="#232537"
+            CornerRadius="15">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            
+            <TextBlock Text="BoostPanel"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       FontSize="18"
+                       Foreground="White"/>
+            
+            <StackPanel Grid.Row="1">
+                <RadioButton Content="Home"
+                             Height="40"
+                             Foreground="White"
+                             FontSize="14"
+                             Style="{StaticResource MenuButtonTheme}"/>
+                <RadioButton Content="Featured"
+                            Height="40"
+                            Foreground="White"
+                            FontSize="14"
+                            Style="{StaticResource MenuButtonTheme}"/>
+                <RadioButton Content="Statistics"
+                            Height="40"
+                            Foreground="White"
+                            FontSize="14"
+                            Style="{StaticResource MenuButtonTheme}"/>
+                
+            </StackPanel>
+            <TextBox Width="150"
+                     Height="30"
+                     VerticalContentAlignment="Center"
+                     HorizontalAlignment="Left"
+                     Margin="10,0,0,0"
+                     Grid.Column="1"
+                     Style="{StaticResource ModernTextBox}"/>
+            <ContentControl Grid.Row="1"
+                            Grid.Column="1"
+                            Margin="8"/>
+
+        </Grid>
+    </Border>
+    
 </Window>
